@@ -1,0 +1,25 @@
+
+composer create-project symfony/website-skeleton site_name
+
+composer require doctrine
+composer require annotations   // Для создания маршрутов с аннотациями
+composer require generator     // Подключения генератора
+
+php bin/console debug:route    // Просмотр всех маршрутов
+
+php bin/console make:controller NameController
+php bin/console make:controller Asu\\MenuController
+
+
+php bin/console make:entity     TableName
+
+php bin/console make:entity TableName --overwrite // добавить поля
+
+php bin/console make:migration  // создаем миграцию
+
+//  php bin/console doctrine:migrations:diff
+
+php bin/console doctrine:migrations:migrate // загружаем миграцию
+
+php bin/console make:crud Product
+
